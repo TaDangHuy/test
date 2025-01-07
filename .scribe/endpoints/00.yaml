@@ -1,0 +1,104 @@
+name: 'Station Master'
+description: |-
+
+  APIs for the Station Master Group Screens
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/station-master/create
+    metadata:
+      groupName: 'Station Master'
+      groupDescription: |-
+
+        APIs for the Station Master Group Screens
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create Station master'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      '[]':
+        name: '[]'
+        description: 'List of Stations Master'
+        required: false
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      '[].station_name':
+        name: '[].station_name'
+        description: 'Station name.'
+        required: false
+        example: illo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      '[].station_name_kana':
+        name: '[].station_name_kana'
+        description: 'Station name (Kana).'
+        required: false
+        example: ratione
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      '[].train_line_ids':
+        name: '[].train_line_ids'
+        description: 'List of train lines through the station.'
+        required: false
+        example:
+          - 4
+        type: 'integer[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      '[].train_line_ids[].train_line_id':
+        name: '[].train_line_ids[].train_line_id'
+        description: 'Train Line ID.'
+        required: false
+        example: 12
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      -
+        station_name: illo
+        station_name_kana: ratione
+        train_line_ids:
+          -
+            train_line_id: 12
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
